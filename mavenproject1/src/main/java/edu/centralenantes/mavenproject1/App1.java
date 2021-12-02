@@ -35,6 +35,7 @@ public class App1 extends java.applet.Applet {
    private void initComponents() {
 
       jToolBar1 = new javax.swing.JToolBar();
+      jButton2 = new javax.swing.JButton();
       jButton1 = new javax.swing.JButton();
       jScrollPane1 = new javax.swing.JScrollPane();
       jList1 = new javax.swing.JList<>();
@@ -43,10 +44,21 @@ public class App1 extends java.applet.Applet {
 
       jToolBar1.setRollover(true);
 
+      jButton2.setText("jButton2");
+      jButton2.setFocusable(false);
+      jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+      jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+      jToolBar1.add(jButton2);
+
       jButton1.setText("jButton1");
       jButton1.setFocusable(false);
       jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
       jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+      jButton1.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            jButton1ActionPerformed(evt);
+         }
+      });
       jToolBar1.add(jButton1);
 
       jList1.setModel(new javax.swing.AbstractListModel<String>() {
@@ -61,9 +73,14 @@ public class App1 extends java.applet.Applet {
       add(jToolBar1, java.awt.BorderLayout.CENTER);
    }// </editor-fold>//GEN-END:initComponents
 
+   private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_jButton1ActionPerformed
+
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JButton jButton1;
+   private javax.swing.JButton jButton2;
    private javax.swing.JList<String> jList1;
    private javax.swing.JScrollPane jScrollPane1;
    private javax.swing.JToolBar jToolBar1;

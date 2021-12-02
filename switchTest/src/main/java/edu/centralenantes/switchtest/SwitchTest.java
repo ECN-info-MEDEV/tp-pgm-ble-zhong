@@ -10,6 +10,10 @@ package edu.centralenantes.switchtest;
  * @author uble
  */
 public class SwitchTest {
+
+   /**
+    * @param args
+    */
    public static void main(String[] args) {
       String color = "red";
       String colorRGB;
@@ -20,6 +24,6 @@ public class SwitchTest {
          case "blue" -> "0000ff";
          default -> "Invalid color";
       };
-System.out.println(colorRGB);
-}
+      System.out.println(colorRGB);
+   }
 }
