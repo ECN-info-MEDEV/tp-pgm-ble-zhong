@@ -10,5 +10,5 @@ package edu.centralenantes.mavenproject1;
  * @author uble
  */
 public class Image {
-   
+   private int[][] image;
 }
