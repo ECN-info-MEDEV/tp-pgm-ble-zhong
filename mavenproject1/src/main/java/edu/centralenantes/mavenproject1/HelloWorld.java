@@ -18,7 +18,10 @@ public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World\n");
         Image i = new Image();
-        i.histo(1);
+        //i.histo(1);
+        i.lire("coins.pgm");
+        System.out.println(i.getImage()[50][20]);
+                
     }
     // TODO 1: This is an action item
     // TODO 2: this is the second action item
