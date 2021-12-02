@@ -31,6 +31,17 @@ public class HelloWorld {
         // 0-50, 51-100, 101-150, 151-200, 201-255
         System.out.println("histo");
         i.histo(l1);
+        
+        Image img2 = new Image();
+
+        
+        img2.lire("coins.pgm");
+        Image img1 = new Image();
+
+        
+        img1.lire("coins.pgm");
+        int seuil = img1.seuillage(img2);
+        System.out.println(seuil);
     }
     // TODO 1: This is an action item
     // TODO 2: this is the second action item
