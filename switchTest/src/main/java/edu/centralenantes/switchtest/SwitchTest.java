@@ -10,5 +10,16 @@ package edu.centralenantes.switchtest;
  * @author uble
  */
 public class SwitchTest {
-   
+   public static void main(String[] args) {
+      String color = "red";
+      String colorRGB;
+      colorRGB = switch (color) {
+         case "black" -> "000000";
+         case "red" -> "ff0000";
+         case "green" -> "008000";
+         case "blue" -> "0000ff";
+         default -> "Invalid color";
+      };
+System.out.println(colorRGB);
+}
 }
