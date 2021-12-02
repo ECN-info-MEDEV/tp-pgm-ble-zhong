@@ -11,7 +11,8 @@ package edu.centralenantes.mavenproject1;
  */
 public class Image {
    private int[][] image;
-    public void histo(int x) {
+   private int max;
+   public void histo(int x) {
         System.out.println("Histogram:\n");
         int array[] = { 0, 0, 0, 0, 0 };
 
