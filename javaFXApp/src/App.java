@@ -5,6 +5,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.layout.BorderPane;
 
@@ -62,10 +65,13 @@ public class App extends Application {
         topMenu.getChildren().add(btn);
         HBox lowMenu = new HBox();
         lowMenu.getChildren().add(btn2);
+        HBox leftMenu = new HBox();
+        leftMenu.getChildren().add(btn3);
 
         BorderPane borderPane = new BorderPane();
         borderPane.setTop(topMenu);
         borderPane.setCenter(lowMenu);
+        borderPane.setLeft(leftMenu);
 
         primaryStage.setScene(new Scene(borderPane, 300, 250));
         primaryStage.show();
