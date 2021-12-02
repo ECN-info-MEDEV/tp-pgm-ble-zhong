@@ -56,7 +56,7 @@ public class Image {
          while ((strCurrentLine = fichier.readLine()) != null) {
             StringTokenizer tokenizer = new StringTokenizer(strCurrentLine, delimiteurs);
             String mot = tokenizer.nextToken();
-                  System.out.println(strCurrentLine);
+                  //System.out.println(strCurrentLine);
                   //System.out.println(mot);
                   if("#".equals(mot)){
                      debut = true;
@@ -116,14 +116,6 @@ public class Image {
    }
    
     public ArrayList<Integer> getFiveInt() {
-        // for test:
-        this.image = new int[255][255];
-        for (int i = 0; i < 255; i++) {
-            for (int j = 0; j < 255; j++) {
-                Random rand = new Random();
-                this.image[i][j] = rand.nextInt(255);
-            }
-        }
 
         // initialize the 5 counters
         ArrayList<Integer> l1 = new ArrayList<>();
@@ -134,8 +126,8 @@ public class Image {
         int x5 = 0;
 
         // calculate the times of occurrence for each group
-        for (int i = 0; i < 255; i++) {
-            for (int j = 0; j < 255; j++) {
+        for (int i = 0; i < this.image.length; i++) {
+            for (int j = 0; j < this.image[0].length; j++) {
                 if (this.image[i][j] <= 50) {
                     x1 += 1;
                 } else if (50 < this.image[i][j] && this.image[i][j] <= 100) {
