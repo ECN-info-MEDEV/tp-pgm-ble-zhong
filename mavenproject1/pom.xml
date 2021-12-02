@@ -10,4 +10,18 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
+    <build>
+        <plugins>
+            <plugin><groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                   <configuration>
+                       <archive>
+                           <manifest>
+                               <mainClass>edu.centralenantes.mavenproject1.HelloWorld</mainClass>
+                           </manifest>
+                       </archive>
+                   </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
