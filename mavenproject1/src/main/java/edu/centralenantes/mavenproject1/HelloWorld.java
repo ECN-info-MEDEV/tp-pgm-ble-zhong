@@ -10,7 +10,7 @@ package edu.centralenantes.mavenproject1;
  * @author uble
  */
 public class HelloWorld {
-   //FIXME
+   // FIXME : this is a fix
     public static void main(String[] args) {
         System.out.println("Hello World");
     }
