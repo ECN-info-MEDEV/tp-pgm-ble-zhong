@@ -5,6 +5,8 @@
  */
 package edu.centralenantes.mavenproject1;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author uble
@@ -18,10 +20,22 @@ public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World\n");
         Image i = new Image();
+<<<<<<< HEAD
         //i.histo(1);
         i.lire("coins.pgm");
         System.out.println(i.getImage()[50][20]);
                 
+=======
+
+        ArrayList<Integer> l1 = i.getFiveInt();
+        // Get five int because we separate 255 in 5 groups:
+        // 0-50, 51-100, 101-150, 151-200, 201-255
+
+        // for (int j = 0; j < 5; j++) {
+        // System.out.println(l1.get(j) + "\n");
+        // }
+        i.histo(l1);
+>>>>>>> c3aa5c1cc20fe07ea868749af04671c43fe41682
     }
     // TODO 1: This is an action item
     // TODO 2: this is the second action item
