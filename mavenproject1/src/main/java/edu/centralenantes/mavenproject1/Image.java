@@ -115,6 +115,25 @@ public class Image {
      }
    }
    
+   public int seuillage(Image img){
+      int result = -1;
+      if ((img.getImage().length != this.image.length) || (img.getImage()[0].length!=this.image[0].length)){
+         return result;
+      }
+      else {
+         result=0;
+         for (int i = 0; i < this.image.length; i++) {
+            for (int j = 0; j < this.image[0].length; j++) {
+              if(this.image[i][j]!=img.getImage()[i][j]){
+                 result+=1;
+              }
+            }
+         }
+         return result;
+      }
+     
+     
+   }
     public ArrayList<Integer> getFiveInt() {
 
         // initialize the 5 counters
