@@ -1,3 +1,6 @@
 .vscode
 
 *.class
+/sample/nbproject/
+/sample/target/
+/mavenproject1/nbproject/

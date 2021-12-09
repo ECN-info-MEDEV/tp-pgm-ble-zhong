@@ -23,7 +23,7 @@ public class HelloWorld {
 
         
         i.lire("coins.pgm");
-        System.out.println(i.getImage()[50][20]);     
+        System.out.println(i.getImage()[0][0]);     
 
         System.out.println("five int");
         ArrayList<Integer> l1 = i.getFiveInt();

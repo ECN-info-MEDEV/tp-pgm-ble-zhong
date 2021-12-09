@@ -7,6 +7,7 @@ package edu.centralenantes.mavenproject1;
 
 
 import java.io.*;
+import static java.lang.Math.abs;
 import java.util.StringTokenizer;
 
 import java.util.ArrayList;
@@ -83,7 +84,7 @@ public class Image {
                      }
                      if (image ==true){
                         while (tokenizer.hasMoreTokens()) {
-                        mot = tokenizer.nextToken();
+                        
                            //System.out.println(this.image[ligne][colonne]);
                            //System.out.println("ligne"+ligne);
                            //System.out.println("colonne"+colonne);
@@ -101,7 +102,7 @@ public class Image {
                         } catch (NumberFormatException e1) {
                             
                         }
-
+                        mot = tokenizer.nextToken();
                     }
                      }
                   }
@@ -131,9 +132,54 @@ public class Image {
          }
          return result;
       }
-     
-     
    }
+   public Image difference(Image img){
+      Image diff = new Image();
+      diff.max = this.max;
+      if ((img.getImage().length != this.image.length) || (img.getImage()[0].length!=this.image[0].length)){
+         return this;
+      }
+      else {
+         diff.image= new int[this.image.length][this.image[0].length];
+         for (int i = 0; i < this.image.length; i++) {
+            for (int j = 0; j < this.image[0].length; j++) {
+              diff.image[i][j] = abs(this.image[i][j] - img.getImage()[i][j]);  
+            }
+         }
+         return diff;
+      }
+   }
+   
+   /* public Image zoom(int zoom){
+      if (zoom==0){
+         return this;
+      }
+      else if (zoom<0){
+         Image dezoom = new Image();
+         dezoom.max=this.max;
+         dezoom.image= new int[this.image.length/zoom][this.image[0].length/zoom];
+         for (int i = 0; i < this.image.length; i++) {
+            for (int j = 0; j < this.image[0].length; j++) {
+              dezoom.image[i][j] = this.image[i][j] - img.getImage()[i][j];  
+            }
+         }
+      }
+      else {
+         Image zoomImg = new Image();
+         zoomImg.max=this.max;
+         zoomImg.image= new int[this.image.length*zoom][this.image[0].length*zoom];
+         for (int i = 0; i < this.image.length; i++) {
+            for (int j = 0; j < this.image[0].length; j++) {
+               for (int k=0; k<zoom;k++){
+                  zoomImg.image[i+k][j+k] = this.image[i][j];
+               }
+                
+         }
+         }
+         
+      }
+   }
+*/
     public ArrayList<Integer> getFiveInt() {
 
         // initialize the 5 counters
